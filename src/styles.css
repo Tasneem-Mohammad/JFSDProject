@@ -1,0 +1,323 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+/* Container for overall layout */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+header .logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ccc;
+}
+
+header nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Flexbox layout for form and image sections */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between the components */
+}
+
+/* Form styles */
+.form-container {
+  flex: 1; /* Allow the form to take available space */
+  background-color: #f7f7f7;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-container p {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+/* Form styles */
+.login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="tel"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus,
+.login-form input[type="tel"]:focus {
+  border-color: #007bff;
+}
+
+/* Button styles */
+.login-form button[type="submit"],
+.login-form .signup-btn,
+.social-login button[type="button"] {
+  width: 100%;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button[type="submit"]:hover,
+.login-form .signup-btn:hover,
+.social-login button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Image section styles */
+.image-container {
+  flex: 1; /* Allow the image to take available space */
+  display: flex;
+  justify-content: center; /* Center the image */
+  align-items: center; /* Center vertically */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-width: 500px; /* Set a max-width for the image */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .row {
+    flex-direction: column; /* Stack components vertically on smaller screens */
+  }
+
+  .form-container,
+  .image-container {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+/* Button styles */
+.login-form button[type="submit"],
+.login-form .signup-btn {
+  width: calc(48% - 10px); /* Adjust width and include space for gap */
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  margin-bottom: 15px; /* Space below buttons */
+}
+
+.login-form button[type="submit"]:hover,
+.login-form .signup-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Social login section styles */
+.social-login {
+  display: flex;
+  flex-direction: column; /* Stack social buttons vertically */
+  gap: 15px; /* Space between buttons */
+}
+
+.social-login button[type="button"] {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex; /* Flex to align icons and text */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.social-login button[type="button"]:hover {
+  background-color: #f1f1f1;
+}
+
+.social-login i {
+  margin-right: 8px; /* Space between icon and text */
+}
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=dTByy3wd&id=42106E82BCF02A194991EBFC922DD212A9E89F98&thid=OIP.dTByy3wdQAV8mAZxJG9dqgHaFj&mediaurl=https%3a%2f%2fstatic.pexels.com%2fphotos%2f55766%2fpexels-photo-55766.jpeg&exph=2448&expw=3264&q=crops+images&simid=608034432189167530&FORM=IRPRST&ck=83C15E3F3CA201C6943A2BE26644A242&selectedIndex=2&itb=0");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional to darken the text background */
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: 2px solid white;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.learn-more {
+  background-color: transparent;
+}
+
+.btn.purchase {
+  background-color: white;
+  color: black;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn.purchase:hover {
+  background-color: transparent;
+  color: white;
+}
